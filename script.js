@@ -10,7 +10,7 @@ let isPalindrome;
 
 function getUserInput () {
     if(textInput.value == ""){
-        alert('write something')
+        alert('Please input a value')
     } else {
         userInput = textInput.value
         textInput.value = ""
