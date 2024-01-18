@@ -25,10 +25,3 @@ function reverseUserInput (){
     console.log(reverseInput);
 }
 
-function renderResult (input){
-    result.textContent = input
-}
-
-
-
-checkBtn.addEventListener("click", getUserInput)
