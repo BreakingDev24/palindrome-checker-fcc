@@ -3,3 +3,32 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+#main-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: rgb(2, 82, 85);
+    gap: 20px;
+}
+
+#main-container h1 {
+    color:rgb(238, 115, 232);
+    
+}
+
+.check-container{
+    min-height: 100px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    background-color: rgb(121, 62, 91);
+    gap: 20px;
+    border-radius: 20px;
+}
