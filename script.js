@@ -33,7 +33,6 @@ function checkPalindrome(){
     } else {
         isPalindrome = false
     }
-    console.log(isPalindrome);
 
 }
 
@@ -42,10 +41,8 @@ function renderResult (){
         result.textContent = userInput + " is a palindrome"
     } else {
         result.textContent = userInput + " is not a palindrome"
-
     }
 }
 
-console.log('ciao' == "cane")
 
 checkBtn.addEventListener("click", getUserInput)
