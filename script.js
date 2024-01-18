@@ -5,6 +5,8 @@ const checkBtn = document.getElementById('check-btn');
 const result = document.getElementById('result');
 
 let userInput = ""
+let reverseInput = ""
+let isPalindrome;
 
 function getUserInput () {
     if(textInput.value == ""){
@@ -15,19 +17,35 @@ function getUserInput () {
         console.log(userInput)
     }
     reverseUserInput()
-    renderResult(userInput)
+    checkPalindrome()
+    renderResult()
 }
 
 
 function reverseUserInput (){
     
-    let reverseInput = userInput.split("").reverse().join("").replace(/[^0-9a-z]/gi, '')//reverse and remove not alphanumeric charcters
-    console.log(reverseInput);
+    reverseInput = userInput.split("").reverse().join("").replace(/[^0-9a-z]/gi, '')//reverse and remove not alphanumeric charcters
 }
 
-function renderResult (input){
-    result.textContent = input
+function checkPalindrome(){
+    if(userInput.replace(/[^0-9a-z]/gi, '').toLocaleLowerCase() == reverseInput.toLocaleLowerCase()) {
+        isPalindrome = true
+    } else {
+        isPalindrome = false
+    }
+    console.log(isPalindrome);
+
 }
 
+function renderResult (){
+    if(isPalindrome === true){
+        result.textContent = userInput + " is a palindrome"
+    } else {
+        result.textContent = userInput + " is not a palindrome"
+
+    }
+}
+
+console.log('ciao' == "cane")
 
 checkBtn.addEventListener("click", getUserInput)
